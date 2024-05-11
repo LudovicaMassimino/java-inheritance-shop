@@ -14,7 +14,14 @@ public class Smartphone extends Prodotto  {
 	}
 	
 	// toString
-	public String toString() {
+	/*public String toString() {
 		return "modello: " + this.modello + "\n" + this.marca + "\n" + this.codice + "\n" + this.prezzoConIva() + "\n" + this.imei + "\n" + this.memoria + "\n";
+	}*/
+	
+	@Override
+	public String toString() {
+		return "Smartphone: " + super.toString() +
+				", IMEI: " + imei + 
+				", Memoria: " + memoria;
 	}
 }

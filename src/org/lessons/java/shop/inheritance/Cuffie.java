@@ -12,7 +12,14 @@ public class Cuffie extends Prodotto {
 		this.codice = super.codice;
 	}
 	// toString
-	public String toString() {
+	/*public String toString() {
 		return "modello: " + this.modello + "\n" + this.marca + "\n" + this.codice + "\n" + this.prezzoConIva() + "\n" + this.colore + "\n" + this.tipo + "\n";
+	}*/
+	
+	@Override
+	public String toString() {
+		return "Smartphone: " + super.toString() +
+				", Colore: " + colore + 
+				", Wireless o cablate: " + tipo;
 	}
 }

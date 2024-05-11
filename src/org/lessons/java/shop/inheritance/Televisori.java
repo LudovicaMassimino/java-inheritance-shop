@@ -12,7 +12,14 @@ public class Televisori extends Prodotto {
 		this.codice = super.codice;
 		}
 	// toString
-	public String toString() {
+	/*public String toString() {
 		return "modello: " + this.modello + "\n" + this.marca + "\n" + this.codice + "\n" + this.prezzoConIva() + "\n" + this.pollici + "\n" + this.smart + "\n";
+	}*/
+	
+	@Override
+	public String toString() {
+		return "Televisori: " + super.toString() +
+				", dimensione: " + pollici + 
+				", smart: " + smart;
 	}
 }
