@@ -33,7 +33,7 @@ public class Prodotto {
 	public String getModello() {
 		return modello;
 	}
-	public void setmModello(String Modello) {
+	public void setModello(String Modello) {
 		this.modello = modello;
 	}
 	public String getMarca() {
@@ -64,10 +64,18 @@ public class Prodotto {
 		this.modello = modello;
 		this.marca = marca;
 		this.prezzo = prezzo;
-		this.codice = random.nextInt(20);
+		this.codice = codiceRandom();
 	}
 	// generaro il codice con numero random
-	Random random = new Random();
+	public int codiceRandom() {
+		Random random = new Random();
+		return random.nextInt(100);
+		}
+		
+		public String codiceEsteso() {
+			String codiceEsteso = String.format("%08d", codice);
+			return codiceEsteso;
+		}
 		
 	// metodo per calcolare il prezzo base
 	public double prezzoBase() {
@@ -75,12 +83,29 @@ public class Prodotto {
 	}
 	
 	// metodo per calcolare il prezzo con l'iva
-	public double prezzoConIva() {
+	public double prezzoIvato() {
 		return this.prezzo + (this.prezzo * IVA / 100);
 	}
 	
 	// metodo per avere il nome esteso, ottenuto concatenando codice e nome
 	public String nomeEsteso() {
-		return this.codice + "-" + this.modello;
+		return String.format("%08d", this.codice) + "-" + this.modello;
+	}
+	
+	@Override
+	public String toString() {
+		return "Codice: " + codiceEsteso () +
+				", Modello: " + modello + 
+				", Marca: " + marca + 
+				", Prezzo base: " + prezzoBase() +
+				", Prezzo con IVA: " + prezzoIvato();
+				
 	}
 }
+
+
+
+
+
+
+
