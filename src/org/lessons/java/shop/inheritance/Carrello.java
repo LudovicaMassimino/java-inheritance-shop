@@ -33,7 +33,7 @@ public class Carrello {
 			
 		// condizione in l'utente scelga televisori:
 		case "televisori":
-			System.out.println("Inserisci la dimensione:");
+			System.out.println("Inserisci la dimensione (pollici):");
 			int pollici = input.nextInt();
 			input.nextLine();
 			System.out.println("Il televisore è smart?");
@@ -61,7 +61,7 @@ public class Carrello {
 			return;
 		}
 		// adesso stampo il prodotto inserito nel carrello:
-		System.out.println("Prodotto inserito nel carrello:");
+		System.out.println("\n\n\n\n" + "Prodotto inserito nel carrello:");
 		System.out.println(myProdotto);
 		
 		input.close();
