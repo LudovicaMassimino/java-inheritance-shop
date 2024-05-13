@@ -94,11 +94,11 @@ public class Prodotto {
 	
 	@Override
 	public String toString() {
-		return "Codice: " + codiceEsteso () + "\n" +
+		return "\n" + "Codice: " + codiceEsteso () + "\n" +
 				"Modello: " + modello + "\n" +
 				"Marca: " + marca + "\n" +
-				"Prezzo base: " + prezzoBase() + "\n" +
-				"Prezzo con IVA: " + prezzoIvato();
+				"Prezzo base: € " + String.format("%.2f", prezzoBase()) + "\n" +
+				"Prezzo con IVA: € " + String.format("%.2f", prezzoIvato());
 				
 	}
 }

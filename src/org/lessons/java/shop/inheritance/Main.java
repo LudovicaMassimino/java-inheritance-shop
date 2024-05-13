@@ -17,7 +17,7 @@ public class Main {
 		Cuffie myCuffie = new Cuffie("tuneBM","JBL", 150.00, "blu", "wireless");
 		System.out.println(myCuffie.toString());*/
 		
-		Prodotto myProdotto = new Prodotto("Prodotto1", "Marca1", 100.00);
+		Prodotto myProdotto = new Prodotto("Prodotto1", "Marca1", 100);
 		System.out.println(myProdotto);
 	}
 }

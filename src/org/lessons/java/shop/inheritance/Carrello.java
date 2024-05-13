@@ -35,8 +35,15 @@ public class Carrello {
 		case "televisori":
 			System.out.println("Inserisci la dimensione:");
 			int pollici = input.nextInt();
+			input.nextLine();
 			System.out.println("Il televisore è smart?");
-			boolean smart = input.nextBoolean();
+			String smartInput = input.nextLine(); // per leggerla come stringa e non come booleano
+			boolean smart = false;
+			if(smartInput.equals("si") || smartInput.equals("sì")) {
+				smart = true;
+			} else if (input.equals("no")) {
+				smart = false;
+			}
 			myProdotto = new Televisori(modello, marca, prezzo, pollici, smart);
 			break;
 			
