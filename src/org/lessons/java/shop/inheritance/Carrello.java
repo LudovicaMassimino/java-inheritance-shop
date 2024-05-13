@@ -17,7 +17,7 @@ public class Carrello {
 		String marca = input.nextLine();
 		
 		System.out.println("Inserisci il prezzo:");
-		double prezzo = input.nextDouble();
+		double prezzo = Double.parseDouble(String.format("%.2f", input.nextDouble()));
 		
 		Prodotto myProdotto;
 		
